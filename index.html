@@ -4,7 +4,7 @@
         
         <title>Cursor Changer</title>
         <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" type="text/css" href="/jquery.funnyText.css" />
+        <link rel="stylesheet" type="text/css" href="./jquery.funnyText.css" />
 	
 	    <style>
 		    .text1, .text2{
@@ -18,21 +18,22 @@
 		    	background-color: #3B3738;
 		    }
 	    </style>
-	
+	    
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	    
-	    <script type="text/javascript" src="/jquery.funnyText.js"></script>
+	    <script type="text/javascript" src="./jquery.funnyText.js"></script>
+	    <script>var $j = jQuery.noConflict(true);</script>
 	    <script type="text/javascript">
-		    $(document).ready(function() {
-		    	$('.text1').funnyText({
-			    	speed: 700,
-			    	activeColor: '#fff',
-			    	color: 'black',
+		    $j(document).ready(function() {
+		    	$j('.text1').funnyText({
+			    	speed: 800,
+			    	activeColor: 'green',
+			    	color: 'white',
 			    	fontSize: '8em'
 		    	});
-			    $('.text2').funnyText({
-			    	speed: 700,
+			    $j('.text2').funnyText({
+			    	speed: 800,
 			    	fontSize: '7em',
 			    	color: '#191919',
 			    	activeColor: '#fff',
@@ -43,7 +44,11 @@
     </head>
     <body>
         <br>
-		<h1>Select a cursor!</h1>
+		<div class="table">
+	        <div class="tableCell">
+	        	<div class="text1">Choose a cursor!</div>
+	        </div>
+        </div>
         <br>
         
         <figure id="mouse-pointer"></figure>
@@ -85,9 +90,9 @@
         <script>window.jQuery || document.write("<script src='js/jquery-1.10.2.min.js'>\x3C/script>")</script>
         <script>
             musicBtn.style.display = "none";
-            $(function (){
-             $(window).mousemove(function(event) {
-                $('#mouse-pointer').css({
+            $j(function (){
+             $j(window).mousemove(function(event) {
+                $j('#mouse-pointer').css({
                     'top' : event.pageY + 'px',
                     'left' : event.pageX + 'px'});
              });
