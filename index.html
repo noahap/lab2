@@ -1,8 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <title>Cursor Changer</title>
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" type="text/css" href="./jquery.funnyText.css" />
+        
+	<style>
+		.text1, .text2{
+			display:block;
+			text-align:center;
+		}
+		body{
+			font-family:arial;
+		}
+		.text2 span {
+			background-color: #DFE2DB;
+		}
+		.text2 span.active {
+			background-color: #3B3738;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	
+	<script type="text/javascript" src="./jquery.funnyText.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  $('.text1').funnyText({
+				speed: 700,
+				activeColor: 'white',
+				color: 'yellow',
+				fontSize: '8em'
+			});
+			$('.text2').funnyText({
+				speed: 700,
+				fontSize: '7em',
+				color: '#191919',
+				activeColor: '#fff',
+				borderColor: 'black'
+			});
+		});
+	</script>
+
     </head>
     <body>
         <figure id="mouse-pointer"></figure>
