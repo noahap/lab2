@@ -13,6 +13,12 @@ figure#mouse-pointer {
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
-    margin-left: -8px; 
+    margin-left: 0px; 
     display: block;
+}
+
+h1 {
+    font-family: helvetica;
+    text-align: center;
+    color: white;
 }
