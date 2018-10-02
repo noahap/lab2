@@ -22,13 +22,18 @@
         <script>
             var item;
             var aud;
+            var isPlaying = false;
             function changeCursor(item) {
                 var curser = "url('gifs/"+item+".gif')";
                 var newMusic = item+".mp3";
                 console.log(curser);
                 document.getElementById("mouse-pointer").style.backgroundImage = curser;
+                if(isPlaying){
+                    aud.pause()
+                }
                 aud = new Audio('music/'+item+'.mp3');
                 aud.play();
+                isPlaying = true;
             }
         </script>
 
