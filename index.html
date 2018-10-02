@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Peanut Butter Jelly</title>
+        <title>Cursor Changer</title>
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <figure id="mouse-pointer"></figure>
-        <embed id="musicBtn" src="banana.mp3" autostart="true">
+        <audio id="musicBtn" src="music/banana.mp3"></audio>
         <br>
         <h1>Pick your cursor!</h1>
         <br>
@@ -21,12 +21,14 @@
 
         <script>
             var item;
+            var aud;
             function changeCursor(item) {
-                console.log(document.getElementById("mouse-pointer").style.backgroundImage);
                 var curser = "url('gifs/"+item+".gif')";
+                var newMusic = item+".mp3";
                 console.log(curser);
                 document.getElementById("mouse-pointer").style.backgroundImage = curser;
-                console.log(document.getElementById("mouse-pointer").style.backgroundImage);
+                aud = new Audio('music/'+item+'.mp3');
+                aud.play();
             }
         </script>
 
