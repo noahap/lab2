@@ -7,7 +7,7 @@ body{
 }
 
 figure#mouse-pointer {
-    background-image: url('banana.gif');
+    background-image: url('gifs/banana.gif');
     width: 100px;
     height: 100px;
     background-repeat: no-repeat;
@@ -21,4 +21,39 @@ h1 {
     font-family: helvetica;
     text-align: center;
     color: white;
+}
+
+#imgHeight {
+    max-height: 275px;
+    max-width: 90%;
+}
+        
+.btn-group btnHeight {
+    width: 33%;
+    height: 300px;
+}
+            
+.btn-group button {
+    width:33%;
+    height:300px;
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+            
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; 
+}
+
+.btn-group button:hover {
+   background-color: #3e8e41;
 }

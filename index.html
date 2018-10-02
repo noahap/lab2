@@ -2,51 +2,34 @@
 <html>
     <head>
         <title>Peanut Butter Jelly</title>
-        <script src="js/prefixfree.min.js"></script>
-        <script src="js/modernizr-2.7.0.dev.js"></script>
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <figure id="mouse-pointer"></figure>
-        <embed id="musicBtn" src="Its_Peanut_Butter_Jelly_Time.mp3" autostart="true">
+        <embed id="musicBtn" src="banana.mp3" autostart="true">
         <br>
         <h1>Pick your cursor!</h1>
         <br>
         <div class="btn-group" style="width:100%">
-          <button style="width:33.3%">Btn1</button>
-          <button style="width:33.3%">Btn2</button>
-          <button style="width:33.3%">Btn3</button>
-          <button style="width:33.3%">Btn4</button>
-          <button style="width:33.3%">Btn5</button>
-          <button style="width:33.3%">Btn6</button>
+          <button id="btnHeight" onclick="changeCursor('banana')"><image id="imgHeight" src="gifs/banana.gif"></image></button>
+          <button id="btnHeight" onclick="changeCursor('mario')"><image id="imgHeight" src="gifs/mario.gif"></image></button>
+          <button id="btnHeight" onclick="changeCursor('spongebob')"><image id="imgHeight" src="gifs/spongebob.gif"></image></button>
+          <button id="btnHeight" onclick="changeCursor('link')"><image id="imgHeight" src="gifs/link.gif"></image></button>
+          <button id="btnHeight" onclick="changeCursor('fishman')"><image id="imgHeight" src="gifs/fishman.gif"></image></button>
+          <button id="btnHeight" onclick="changeCursor('nyancat')"><image id="imgHeight" src="gifs/nyancat.gif"></image></button>
         </div>
 
-        <style>
-            .btn-group button {
-             background-color: #4CAF50; /* Green background */
-                border: 1px solid green; /* Green border */
-                color: white; /* White text */
-                padding: 10px 24px; /* Some padding */
-                cursor: pointer; /* Pointer/hand icon */
-                float: left; /* Float the buttons side by side */
+        <script>
+            var item;
+            function changeCursor(item) {
+                console.log(document.getElementById("mouse-pointer").style.backgroundImage);
+                var curser = "url('gifs/"+item+".gif')";
+                console.log(curser);
+                document.getElementById("mouse-pointer").style.backgroundImage = curser;
+                console.log(document.getElementById("mouse-pointer").style.backgroundImage);
             }
+        </script>
 
-            /* Clear floats (clearfix hack) */
-            .btn-group:after {
-                content: "";
-                clear: both;
-                display: table;
-            }
-
-            .btn-group button:not(:last-child) {
-                border-right: none; /* Prevent double borders */
-            }
-
-            /* Add a background color on hover */
-            .btn-group button:hover {
-                   background-color: #3e8e41;
-            }
-        </style>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write("<script src='js/jquery-1.10.2.min.js'>\x3C/script>")</script>
         <script>
