@@ -11,9 +11,6 @@
 		    	display:block;
 		    	text-align:center;
 	    	}
-	    	body{
-		    	font-family:arial;
-		    }
 		    .text2 span {
 		    	background-color: #DFE2DB;
 	    	}
@@ -45,15 +42,12 @@
 	    </script>
     </head>
     <body>
+        <br>
+		<h1>Select a cursor!</h1>
+        <br>
+        
         <figure id="mouse-pointer"></figure>
         <audio id="musicBtn" src="music/banana.mp3"></audio>
-        <br>
-		<div class="table">
-	        <div class="tableCell">
-	        	<div class="text1"> Select a cursor!</div>
-	        </div>
-        </div>
-        <br>
         
         <div class="btn-group" style="width:100%">
           <button id="btnHeight" onclick="changeCursor('banana')"><image id="imgHeight" src="gifs/banana.gif"></image></button>
@@ -68,7 +62,7 @@
           <button id="btnHeight" onclick="changeCursor('minions')"><image id="imgHeight" src="gifs/minions.gif"></image></button>
           <button id="btnHeight" onclick="changeCursor('pokemon')"><image id="imgHeight" src="gifs/pokemon.gif"></image></button>
         </div>
-
+        
         <script>
             var item;
             var aud;
