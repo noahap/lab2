@@ -38,7 +38,7 @@ h1 {
     width:33%;
     height:300px;
     background-color: #4CAF50;
-    border: 1px black;
+    border: 1px solid black;
     padding: 10px 24px;
     float: left;
 }
@@ -86,8 +86,8 @@ h1 {
     color: white;
 }
 
-.fa-linkedin {
-    background: #007bb5;
+.fa-pause-circle {
+    background: red;
     color: white;
 }
 

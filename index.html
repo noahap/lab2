@@ -27,9 +27,10 @@
 		    $j(document).ready(function() {
 		    	$j('.text1').funnyText({
 			    	speed: 800,
-			    	activeColor: 'green',
+			    	activeColor: '#4CAF50',
 			    	color: 'white',
-			    	fontSize: '8em'
+			    	fontSize: '8em',
+			    	borderColor: 'green'
 		    	});
 			    $j('.text2').funnyText({
 			    	speed: 800,
@@ -44,7 +45,7 @@
     <body>
 		<div class="table">
 	        <div class="tableCell">
-	        	<div class="text1">Choose a cursor!</div>
+	        	<div class="text1" style="font-family: Calibri">Choose a cursor!</div>
 	        </div>
         </div>
         <br>
@@ -72,6 +73,7 @@
         
         <br>
         <a href="https://github.com/noahap/lab2" target="_blank" class="fa fa-github"></a>
+        <a onclick="pause()" class="fa fa-pause-circle"></a>
         <a href="./cursorChanger.zip" download="" class="fa fa-download"></a>
 
         <br>
@@ -90,6 +92,10 @@
                 aud = new Audio('music/'+item+'.mp3');
                 aud.play();
                 isPlaying = true;
+            }
+            
+            function pause(){
+                aud.pause();
             }
         </script>
 
