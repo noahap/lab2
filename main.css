@@ -81,7 +81,17 @@ h1 {
     color: white;
 }
 
+.fa-file {
+    background: red;;
+    color: white;
+}
+
 .fa-linkedin {
     background: #007bb5;
     color: white;
+}
+
+.fa-download {
+  background: purple;
+  color: white;
 }
